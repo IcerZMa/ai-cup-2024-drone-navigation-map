@@ -52,8 +52,12 @@
 ---
 ## 專案結構 (Project Structure)
 ```text
-.
+
 ├── CODE/
 │   ├── aicup_notebook.ipynb         # 完整實作：SE-Block, ASPP, Attention, 4-Channel, Hybrid Loss
 │   └── aicup競賽二範例程式.ipynb     # 官方原始基準模型 (Baseline)
 └── README.md                        # 本說明文件
+```
+* ## 最終獲得 15/128的成績
+   
+![result](result.png)
