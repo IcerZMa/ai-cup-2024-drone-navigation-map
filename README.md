@@ -62,6 +62,20 @@
 │   └── aicup競賽二範例程式.ipynb     # 官方原始基準模型 (Baseline)
 └── README.md                        # 本說明文件
 ```
-* ## 最終獲得 15/128的成績
-   
+
+## 實驗結果 (Performance)
+
+本項目採用競賽官方規定的 **Mean F-measure ($F_{\beta}$)** 作為評估指標，其中參數設定為 $\beta^2 = 0.3$。
+
+| 模型 (Model) | Mean F-measure | 提升幅度 (Improvement) |
+| :--- | :---: | :---: |
+| 基準模型 (Baseline) | 0.4513 | - |
+| **本研究模型 (Proposed)** | **0.7331** | **+62.45%** |
+
+### 指標說明
+評分方式是在多個閾值（0-255）下計算二值化圖像的 F-score 並取平均值：
+$$F\text{-score} = \frac{(1 + \beta^2) \cdot \text{Precision} \cdot \text{Recall}}{\beta^2 \cdot \text{Precision} + \text{Recall}}$$
+其中 $\beta^2 = 0.3$
+
+## 最終獲得 15/128的成績
 ![result](result.png)
